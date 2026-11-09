@@ -107,6 +107,9 @@ code { font-size: 0.9em; background: var(--surface-alt); padding: 0.05em 0.3em; 
 
 /* Editorial markers */
 .draft-banner { background: var(--draft-bg); color: var(--draft-text); font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; padding: 0.6rem 0.9rem; border-left: 4px solid currentColor; }
+.translation-notice { margin-block-end: 1.75rem; padding: 0.9rem 1rem; border-inline-start: 4px solid var(--primary); background: var(--surface-alt); color: var(--text); font: 0.9rem/1.5 var(--font-sans); }
+.translation-notice p { margin: 0.5rem 0 0; }
+.translation-review { margin-block-start: 2.5rem; border-top: 1px solid var(--line); }
 .badge { display: inline-block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); border: 1px solid var(--line); padding: 0.1rem 0.45rem; vertical-align: middle; }
 
 /* Collection listings: studies, articles */
