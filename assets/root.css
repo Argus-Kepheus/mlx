@@ -1,0 +1,95 @@
+/* Floppy-disk language selector. Loaded only by the root document. */
+.root-selector .language-choice {
+  max-width: 66rem;
+  padding-block: clamp(2rem, 7vw, 5rem);
+}
+.root-selector h1 { margin-bottom: clamp(1.7rem, 4vw, 2.75rem); }
+.root-selector .language-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.15rem, 3vw, 2rem);
+  max-width: 36rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.root-selector .language-list > li { min-width: 0; margin: 0; padding-bottom: 1.6rem; }
+.root-selector .disk-card {
+  display: block;
+  position: relative;
+  container-type: inline-size;
+  aspect-ratio: 1;
+  padding: 0;
+  border: 0;
+  border-radius: .6rem;
+  background: transparent;
+  text-decoration: none;
+  transition: transform .18s ease;
+}
+.root-selector .disk-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 .35rem .35rem #0b16282b);
+}
+.root-selector .disk-label {
+  position: absolute;
+  inset-inline-start: 13%;
+  inset-block-start: 43%;
+  width: 74%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #17232d;
+  font-family: var(--font-serif);
+  font-size: clamp(.95rem, 13cqw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+.root-selector .disk-name,
+.root-selector .disk-region {
+  padding-inline: .1em;
+  border-radius: .08em;
+  background: #faf9f0e8;
+}
+.root-selector .disk-region {
+  margin-top: .12em;
+  font-size: clamp(.75rem, 7cqw, 1.2rem);
+  font-weight: 400;
+}
+.root-selector .disk-status {
+  position: absolute;
+  inset-block-start: calc(100% + .2rem);
+  inset-inline: 0;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: .875rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.root-selector .disk-card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+@media (hover: hover) {
+  .root-selector .disk-card:hover { transform: translateY(-.3rem); }
+}
+@media (min-width: 56rem) {
+  .root-selector .language-list { grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: none; }
+}
+@media (max-width: 22.5rem) {
+  .root-selector .language-list { grid-template-columns: minmax(0, 17rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .root-selector .disk-card { transition: none; }
+  .root-selector .disk-card:hover { transform: none; }
+}
+@media print {
+  .root-selector .language-list > li { break-inside: avoid; }
+  .root-selector .disk-card img { filter: none; }
+}
