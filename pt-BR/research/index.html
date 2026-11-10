@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pesquisa · Multilinguistics</title>
   <meta name="description" content="Os domínios de análise e as frentes de pesquisa do projeto Multilinguistics.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Multilinguistics">
+  <meta property="og:title" content="Pesquisa · Multilinguistics">
+  <meta property="og:description" content="Os domínios de análise e as frentes de pesquisa do projeto Multilinguistics.">
+  <meta property="og:url" content="https://mlx.arguskepheus.com.br/pt-BR/research/">
+  <meta property="og:image" content="https://mlx.arguskepheus.com.br/assets/branding/social-card.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Multilinguistics ao lado de uma grade de quatro disquetes antigos em azul, ciano e verde.">
   
   <link rel="canonical" href="https://mlx.arguskepheus.com.br/pt-BR/research/">
   <link rel="alternate" hreflang="en" href="https://mlx.arguskepheus.com.br/en/research/">
@@ -13,7 +23,9 @@
   <link rel="alternate" hreflang="x-default" href="https://mlx.arguskepheus.com.br/en/research/">
   <link rel="stylesheet" href="../../assets/fonts.css">
   <link rel="stylesheet" href="../../assets/site.css">
-  <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/branding/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="../../assets/branding/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="../../assets/branding/apple-touch-icon.png" sizes="180x180">
   <script src="../../assets/site.js"></script>
   
 </head>
@@ -34,9 +46,6 @@
             <ul class="language-options"><li><a href="../../en/research/" hreflang="en" lang="en">English</a></li><li><a href="../../es/research/" hreflang="es" lang="es">Español</a></li><li><span aria-current="true" lang="pt-BR">Português</span></li><li><a href="../../quh/research/" hreflang="quh" lang="quh">Qhichwa (Bolivia sur) · provisional</a></li></ul>
           </details>
         </nav>
-        <button type="button" class="palette-toggle" data-palette-toggle hidden aria-label="Alternar entre claro e escuro" title="Alternar entre claro e escuro">
-          <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
-        </button>
       </div>
     </div>
   </header>
@@ -66,7 +75,6 @@
   <footer class="site-footer">
     <div class="wrap footer-inner">
       <p>Organizado pela Editora Argus Kepheus</p>
-      <p>Editor: Sergio Cordero Calvimontes</p>
       <p lang="pt-BR">Última atualização: 9 de novembro de 2026</p>
       <p><a href="../about/">Correções e contato</a></p>
     </div>
@@ -81,9 +89,14 @@
       <input id="reading-size" type="range" min="100" max="200" step="5" value="100" aria-label="Tamanho do texto" aria-valuetext="100%">
       <output for="reading-size" data-reading-value>100%</output>
     </div>
-    <a class="floating-control control-top" href="#main" aria-label="Voltar ao topo" title="Voltar ao topo">
-      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 11 6-6 6 6M12 5v15"/></svg>
-    </a>
+    <div class="control-actions">
+      <a class="floating-control control-top" href="#main" aria-label="Voltar ao topo" title="Voltar ao topo">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m6 11 6-6 6 6M12 5v15"/></svg>
+      </a>
+      <button type="button" class="floating-control palette-toggle" data-palette-toggle hidden aria-label="Alternar entre claro e escuro" title="Alternar entre claro e escuro">
+        <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" width="18" height="18"><path d="M12 3a9 9 0 1 0 9 9 7 7 0 0 1-9-9z" fill="currentColor"/></svg>
+      </button>
+    </div>
   </div>
 
 </body>

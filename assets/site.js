@@ -1,3 +1,19 @@
+// Keep anchor targets clear of the persistent header as its navigation wraps.
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+    function measure() {
+      document.documentElement.style.setProperty("--header-height", Math.ceil(header.getBoundingClientRect().height) + "px");
+    }
+    measure();
+    if (window.ResizeObserver) new ResizeObserver(measure).observe(header);
+    window.addEventListener("resize", measure);
+    window.addEventListener("pageshow", measure);
+    if (document.fonts) document.fonts.ready.then(measure);
+  });
+})();
+
 // Palette switch. Without JavaScript the page follows the system preference.
 (function () {
   var KEY = "mlx-palette";
